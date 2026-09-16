@@ -10,7 +10,7 @@ function exibirTextoNaTela(tag, texto) {
 }
 
 function exibirMensagemInicial() {
-    exibirTextoNaTela('h1', 'Princesa Melina e o Enigma Secreto');
+    exibirTextoNaTela('h1', 'Jogo do número Secreto');
     exibirTextoNaTela('p', 'Que tal tentar adivinhar um numero secreto? Escolha um numero de 1 a 10.');
 }
 
@@ -20,9 +20,9 @@ function verificarChute() {
     let chute = document.querySelector('input').value;
     
     if (chute == numeroSecreto) {
-        exibirTextoNaTela('h1', 'Acertou, Mel! Parabéns! Sua mamãe com certeza tem mto orgulho de vc!');
+        exibirTextoNaTela('h1', 'Acertou! Parabéns!!');
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-        let mensagemTentativas = `Você se esforçou e descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
+        let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
         exibirTextoNaTela('p', mensagemTentativas);
         document.getElementById('reiniciar').removeAttribute('disabled');
     } else {
